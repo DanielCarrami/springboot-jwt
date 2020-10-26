@@ -11,13 +11,13 @@ VOLUME /tmp
 EXPOSE 8100
 
 # The application's jar file
-ARG JAR_FILE=target/springboot-jwt-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/SpringBootJwtAuthentication-0.0.1.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} springboot-jwt.jar
+ADD ${JAR_FILE} SpringBootJwtAuthentication.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/springboot-jwt.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/SpringBootJwtAuthentication.jar"]
 
 # docker build
 # sudo docker build -t <dockerhub-user>/springboot-jwt .
