@@ -1,4 +1,5 @@
 package com.grokonez.jwtauthentication.controller;
+import java.util.List;
 
 import com.grokonez.jwtauthentication.model.Estado;
 import com.grokonez.jwtauthentication.repository.EstadoRepository;
@@ -19,8 +20,8 @@ public class EstadoController {
     private EstadoRepository estadoRepository;
 
     @GetMapping("/estados")
-    public Page<Estado> getEstados(Pageable pageable) {
-        return estadoRepository.findAll(pageable);
+    public List<Estado> getEstados() {
+        return estadoRepository.findEstados();
     }
   
     
